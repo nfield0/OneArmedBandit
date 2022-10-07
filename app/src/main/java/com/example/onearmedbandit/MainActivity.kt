@@ -9,6 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+    private var spinCount = 0
+    private var winCount = 0
+    private var winLossRatio = 0.0
     private val onCreate = "OnCreate"
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -24,10 +27,17 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, InstructionsActivity::class.java)
             startActivity(intent)
         }
+        val statsButton: Button = findViewById(R.id.stats)
+        statsButton.setOnClickListener {
+            val intent = Intent(this, StatisticsActivity::class.java)
+            Log.d("spins:", spinCount.toString())
+            intent.putExtra("spinCount", spinCount)
+            intent.putExtra("winCount", winCount)
+            intent.putExtra("winLossRatio", winLossRatio)
+            startActivity(intent)
+        }
     }
-    private var spinCount = 0
-    private var winCount = 0
-    private var winLossRatio = 0.0
+
     private fun roll(){
         spinCount++
         val rolled = "RollCalled"
@@ -69,13 +79,7 @@ class MainActivity : AppCompatActivity() {
             resultImage.setImageResource(R.drawable.badluck)
         }
 
-        val numSpinsView: TextView = findViewById(R.id.numSpins)
-        val numWinsView: TextView = findViewById(R.id.numWins)
-        var winLossRatioView: TextView = findViewById(R.id.winLossRatio)
-        numSpinsView.text = "$spinCount"
-        numWinsView.text = "$winCount"
-        winLossRatio = (winCount.toDouble() / spinCount).toDouble()
-        winLossRatioView.text =  String.format("%.4f", winLossRatio)
+        winLossRatio = (winCount.toDouble() / spinCount)
     }
 
     private fun draw(num: Int): Int {

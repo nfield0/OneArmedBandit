@@ -10,13 +10,13 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spin"
         android:backgroundTint="@color/red"
+        android:text="Spin"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultImage" />
+        app:layout_constraintTop_toTopOf="@+id/resultImage" />
 
     <ImageView
         android:id="@+id/resultImage"
@@ -68,81 +68,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button">
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="1.0">
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="# Of Spins"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="# of Wins"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Win/Loss Ratio"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/numSpins"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                tools:text="4" />
-
-            <TextView
-                android:id="@+id/numWins"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                tools:text="1" />
-
-            <TextView
-                android:id="@+id/winLossRatio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                tools:text=".555" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="27dp">
 
             <Button
                 android:id="@+id/instructions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Instructions"
-                android:textColor="@color/black"
                 android:backgroundTint="@color/red"
-                />
+                android:text="Instructions"
+                android:textColor="@color/black" />
 
             <Space
                 android:layout_width="130dp"
@@ -152,10 +91,10 @@
                 android:id="@+id/stats"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
                 android:text="Statistics"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:backgroundTint="@color/red"/>
+                android:textColor="@color/black" />
         </TableRow>
 
     </TableLayout>
