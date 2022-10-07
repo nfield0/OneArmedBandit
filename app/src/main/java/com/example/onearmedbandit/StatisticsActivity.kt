@@ -11,6 +11,7 @@ class StatisticsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_statistics)
 
 
+
         val spinCount = intent.getIntExtra("spinCount",0)
         val winCount = intent.getIntExtra("winCount",0)
         val winLossRatio = intent.getDoubleExtra("winLossRatio",0.0)
