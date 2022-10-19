@@ -6,34 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".InstructionsActivity">
 
-    <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+    <TextView
+        android:id="@+id/instructionsText"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="1dp"
+        android:rotationX="0"
+        android:text="@string/instructions"
+        android:textAlignment="center"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/instructionsTextHeader"
+        app:layout_constraintVertical_bias="1.0" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:text="@string/home_button"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/instructionsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/instructionsText" />
 
-            <TextView
-                android:id="@+id/instructionsTextHeader"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:text="Instructions"
-                android:textAlignment="center"
-                android:textColor="#F44336"
-                android:textSize="50dp"
-                android:textStyle="bold" />
+    <TextView
+        android:id="@+id/instructionsTextHeader"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:rotationX="22"
+        android:text="@string/instructionWord"
+        android:textAlignment="center"
+        android:textColor="#F44336"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/instructionsText"
-                android:layout_width="match_parent"
-                android:layout_height="612dp"
-                android:text="Click Spin to Roll the Images. When 3 of the emojis match, you have won! Enjoy!"
-                android:textSize="30dp" />
-        </LinearLayout>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

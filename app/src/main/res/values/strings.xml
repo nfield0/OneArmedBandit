@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">One Armed Bandit</string>
+    <string name="home_button">Return to Game</string>
+    <string name="instructionWord">Instructions</string>
+    <string name="statistics">Statistics</string>
+    <string name="statisticsHeader">Your Statistics</string>
+    <string name="spin">Spin</string>
+    <string name="spinCountHeader"># of Spins</string>
+    <string name="winCountHeader"># of Wins</string>
+    <string name="winLossHeader">Win/Loss Ratio</string>
+    <string name="instructions">Click Spin to Roll the Images. When 3 of the emojis match, you have won! Enjoy!</string>
 </resources>

@@ -12,64 +12,60 @@ class MainActivity : AppCompatActivity() {
     private var spinCount = 0
     private var winCount = 0
     private var winLossRatio = 0.0
-    private val onCreate = "OnCreate"
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        Log.d(onCreate,"OnCreate Entered")
+        Log.d("HomePage","MainActivity OnCreate called")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         val rollButton: Button = findViewById(R.id.button)
-        rollButton.setOnClickListener{ roll()}
         val instructionsButton: Button = findViewById(R.id.instructions)
+        val statsButton: Button = findViewById(R.id.stats)
+
+        rollButton.setOnClickListener{ roll()}
+
         instructionsButton.setOnClickListener{
             val intent = Intent(this, InstructionsActivity::class.java)
             startActivity(intent)
         }
-        val statsButton: Button = findViewById(R.id.stats)
+
         statsButton.setOnClickListener {
             val intent = Intent(this, StatisticsActivity::class.java)
-            Log.d("spins:", spinCount.toString())
+            Log.d("Spin Called: ", spinCount.toString())
             intent.putExtra("spinCount", spinCount)
             intent.putExtra("winCount", winCount)
             intent.putExtra("winLossRatio", winLossRatio)
             startActivity(intent)
         }
+
+
     }
 
     private fun roll(){
         spinCount++
-        val rolled = "RollCalled"
-
-
         val spinner = Spin(4)
-        val spin1 = spinner.roll()
-        val spin2 = spinner.roll()
-        val spin3 = spinner.roll()
-
-        Log.d(rolled, "Random Number 1: " + spin1 + "Random Number 2: " + spin2 + "Random Number 3: " + spin3)
 
         val spinImage1: ImageView = findViewById(R.id.imageView)
         val spinImage2: ImageView = findViewById(R.id.imageView2)
         val spinImage3: ImageView = findViewById(R.id.imageView3)
 
-        val drawableResource = draw(spin1)
-        val drawableResource2 = draw(spin2)
-        val drawableResource3 = draw(spin3)
+        val drawableResource = draw(spinner.roll())
+        val drawableResource2 = draw(spinner.roll())
+        val drawableResource3 = draw(spinner.roll())
 
         spinImage1.setImageResource(drawableResource)
-        spinImage1.contentDescription = spin1.toString()
+        spinImage1.contentDescription = drawableResource.toString()
 
         spinImage2.setImageResource(drawableResource2)
-        spinImage2.contentDescription = spin2.toString()
+        spinImage2.contentDescription = drawableResource2.toString()
 
         spinImage3.setImageResource(drawableResource3)
-        spinImage3.contentDescription = spin3.toString()
+        spinImage3.contentDescription = drawableResource3.toString()
 
         val resultImage: ImageView = findViewById(R.id.resultImage)
 
-        if(spin1 == spin2 && spin2 == spin3)
+        if(drawableResource == drawableResource2 && drawableResource2 == drawableResource3)
         {
             winCount++
             resultImage.setImageResource(R.drawable.winner)
@@ -94,14 +90,14 @@ class MainActivity : AppCompatActivity() {
         }
         return drawableResource
     }
-
-
 }
 
 class Spin (private val numValues: Int)
 {
 
-    fun roll(): Int {
-        return (1..numValues).random()
+    fun roll(): Int{
+        val random = (1..numValues).random()
+        Log.d("Random: ", random.toString())
+        return random
     }
 }

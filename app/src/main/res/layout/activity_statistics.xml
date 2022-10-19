@@ -6,11 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".StatisticsActivity">
 
+    <Button
+        android:id="@+id/homeButton2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:text="@string/home_button"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your Statistics"
+        android:text="@string/statisticsHeader"
         android:textAlignment="textStart"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
@@ -35,7 +47,7 @@
                 android:id="@+id/textView"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:text="# Of Spins"
+                android:text="@string/spinCountHeader"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -43,7 +55,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="143dp"
                 android:layout_height="match_parent"
-                android:text="# of Wins"
+                android:text="@string/winCountHeader"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -51,7 +63,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Win/Loss Ratio"
+                android:text="@string/winLossHeader"
                 android:textAlignment="center"
                 android:textSize="20sp" />
         </TableRow>
