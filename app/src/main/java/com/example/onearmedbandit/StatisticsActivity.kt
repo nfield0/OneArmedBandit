@@ -18,15 +18,14 @@ class StatisticsActivity : AppCompatActivity() {
         Log.d("spins IN STATS:", spinCount.toString())
         val homeButton2: Button = findViewById(R.id.homeButton2)
 
-        homeButton2.setOnClickListener {
-            finish()
-        }
+        homeButton2.setOnClickListener {finish()}
 
         val numSpinsView: TextView = findViewById(R.id.numSpins)
         val numWinsView: TextView = findViewById(R.id.numWins)
         val winLossRatioView: TextView = findViewById(R.id.winLossRatio)
         numSpinsView.text = "$spinCount"
         numWinsView.text = "$winCount"
-        winLossRatioView.text =  String.format("%.4f", winLossRatio)
+        val winLossPercentage = (winLossRatio * 100).toInt()
+        winLossRatioView.text = "$winLossPercentage"
     }
 }

@@ -4,9 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.isVisible
 
 class MainActivity : AppCompatActivity() {
     private var spinCount = 0
@@ -22,8 +25,13 @@ class MainActivity : AppCompatActivity() {
         val rollButton: Button = findViewById(R.id.button)
         val instructionsButton: Button = findViewById(R.id.instructions)
         val statsButton: Button = findViewById(R.id.stats)
+        val clickMe: TextView = findViewById(R.id.clickMe)
+        val topDown = AnimationUtils.loadAnimation(this, R.anim.topdown)
 
-        rollButton.setOnClickListener{ roll()}
+        clickMe.startAnimation(topDown)
+
+
+        rollButton.setOnClickListener{ spin()}
 
         instructionsButton.setOnClickListener{
             val intent = Intent(this, InstructionsActivity::class.java)
@@ -42,9 +50,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun roll(){
+    private fun spin(){
         spinCount++
         val spinner = Spin(4)
+        val clickMe: TextView = findViewById(R.id.clickMe)
+        clickMe.text = ""
 
         val spinImage1: ImageView = findViewById(R.id.imageView)
         val spinImage2: ImageView = findViewById(R.id.imageView2)
@@ -100,4 +110,8 @@ class Spin (private val numValues: Int)
         Log.d("Random: ", random.toString())
         return random
     }
+
+
+
+
 }

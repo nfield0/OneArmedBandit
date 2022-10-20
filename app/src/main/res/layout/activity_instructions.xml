@@ -22,6 +22,17 @@
         app:layout_constraintTop_toBottomOf="@+id/instructionsTextHeader"
         app:layout_constraintVertical_bias="1.0" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="145dp"
+        android:layout_height="133dp"
+        android:alpha=".5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/instructionsText"
+        app:srcCompat="@drawable/one_armed_bandit__2_" />
+
     <Button
         android:id="@+id/homeButton"
         android:layout_width="150dp"
@@ -31,9 +42,9 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/instructionsText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/instructionsText" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
 
     <TextView
         android:id="@+id/instructionsTextHeader"

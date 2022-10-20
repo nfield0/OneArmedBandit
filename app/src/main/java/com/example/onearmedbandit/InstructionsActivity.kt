@@ -13,10 +13,7 @@ class InstructionsActivity : AppCompatActivity() {
         val homeButton: Button = findViewById(R.id.homeButton)
 
 
-        homeButton.setOnClickListener {
-            finish()
-
-        }
+        homeButton.setOnClickListener {finish()}
     }
 
 

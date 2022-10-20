@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/natha/OneDrive - Dundalk Institute of Technology/Year 3/Mobile Integration/OneArmedBandit2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2555" />
         <entry key="..\:/Users/natha/OneDrive - Dundalk Institute of Technology/Year 3/Mobile Integration/OneArmedBandit2/app/src/main/res/layout/activity_instructions.xml" value="0.20018115942028986" />
         <entry key="..\:/Users/natha/OneDrive - Dundalk Institute of Technology/Year 3/Mobile Integration/OneArmedBandit2/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/natha/OneDrive - Dundalk Institute of Technology/Year 3/Mobile Integration/OneArmedBandit2/app/src/main/res/layout/activity_statistics.xml" value="0.20018115942028986" />
+        <entry key="..\:/Users/natha/OneDrive - Dundalk Institute of Technology/Year 3/Mobile Integration/OneArmedBandit2/app/src/main/res/layout/activity_statistics.xml" value="0.264" />
+        <entry key="..\:/Users/natha/OneDrive - Dundalk Institute of Technology/Year 3/Mobile Integration/OneArmedBandit2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2555" />
       </map>
     </option>
   </component>

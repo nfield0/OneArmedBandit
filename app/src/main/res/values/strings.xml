@@ -5,8 +5,9 @@
     <string name="statistics">Statistics</string>
     <string name="statisticsHeader">Your Statistics</string>
     <string name="spin">Spin</string>
+    <string name="clickMe">Click Me!</string>
     <string name="spinCountHeader"># of Spins</string>
     <string name="winCountHeader"># of Wins</string>
-    <string name="winLossHeader">Win/Loss Ratio</string>
+    <string name="winLossHeader">Win/Loss %</string>
     <string name="instructions">Click Spin to Roll the Images. When 3 of the emojis match, you have won! Enjoy!</string>
 </resources>
