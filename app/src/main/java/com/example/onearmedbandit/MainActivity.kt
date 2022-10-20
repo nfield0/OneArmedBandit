@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.SwitchCompat
 import androidx.core.view.isVisible
 
 class MainActivity : AppCompatActivity() {
@@ -25,13 +25,16 @@ class MainActivity : AppCompatActivity() {
         val rollButton: Button = findViewById(R.id.button)
         val instructionsButton: Button = findViewById(R.id.instructions)
         val statsButton: Button = findViewById(R.id.stats)
-        val clickMe: TextView = findViewById(R.id.clickMe)
+        val clickMe: ImageView = findViewById(R.id.resultImage)
         val topDown = AnimationUtils.loadAnimation(this, R.anim.topdown)
-
+        val darkMode: SwitchCompat = findViewById(R.id.themeMode)
         clickMe.startAnimation(topDown)
 
+        rollButton.setOnClickListener{
+            clickMe.clearAnimation()
+            spin()
 
-        rollButton.setOnClickListener{ spin()}
+        }
 
         instructionsButton.setOnClickListener{
             val intent = Intent(this, InstructionsActivity::class.java)
@@ -46,6 +49,13 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("winLossRatio", winLossRatio)
             startActivity(intent)
         }
+
+        darkMode.setOnCheckedChangeListener { _: CompoundButton, isChecked: Boolean ->
+            if(isChecked)
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
+
 
 
     }

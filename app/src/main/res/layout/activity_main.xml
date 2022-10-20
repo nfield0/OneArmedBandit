@@ -103,22 +103,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/clickMe"
-        android:textSize="34sp"
+        android:textColor="@color/red"
 
+        android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.098" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/themeMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:minHeight="32dp"
-        android:text="DarkMode"
+        android:text="@string/darkmode"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.996"

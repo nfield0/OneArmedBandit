@@ -10,4 +10,5 @@
     <string name="winCountHeader"># of Wins</string>
     <string name="winLossHeader">Win/Loss %</string>
     <string name="instructions">Click Spin to Roll the Images. When 3 of the emojis match, you have won! Enjoy!</string>
+    <string name="darkmode">DarkMode</string>
 </resources>
