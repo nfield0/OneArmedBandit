@@ -12,7 +12,6 @@ class InstructionsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_instructions)
         val homeButton: Button = findViewById(R.id.homeButton)
 
-
         homeButton.setOnClickListener {finish()}
     }
 
